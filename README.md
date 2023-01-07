@@ -57,7 +57,10 @@ speech_config = speechsdk.SpeechConfig(auth_token=token, region=region)
 
 The complete test code can be found in the src/testClient/test.py file.
 
-For Azure Speech SDK JavaScript, the SpeechConfig object needs to be constructed using the fromAuthenticationToken() method.
+For Azure Speech SDK JavaScript, the SpeechConfig object needs to be constructed using the [fromAuthenticationToken()](https://learn.microsoft.com/en-us/javascript/api/microsoft-cognitiveservices-speech-sdk/speechconfig?view=azure-node-latest#microsoft-cognitiveservices-speech-sdk-speechconfig-fromauthorizationtoken) method.
+
+## Reference:
+[Authenticate with an access token](https://learn.microsoft.com/en-us/azure/cognitive-services/authentication?tabs=powershell#authenticate-with-an-access-token)
 
 # 使用令牌访问Azure 认知服务
 
@@ -112,3 +115,5 @@ speech_config = speechsdk.SpeechConfig(auth_token=token, region=region)
 
 对于Azure Sppech SDK JavaScript 来说，需要使用[fromAuthenticationToken()](https://learn.microsoft.com/en-us/javascript/api/microsoft-cognitiveservices-speech-sdk/speechconfig?view=azure-node-latest#microsoft-cognitiveservices-speech-sdk-speechconfig-fromauthorizationtoken) 方法构建SpeechConfig 对象。
 
+## 参考链接:
+[使用访问令牌进行身份验证](https://learn.microsoft.com/zh-cn/azure/cognitive-services/authentication?tabs=powershell#authenticate-with-an-access-token)
