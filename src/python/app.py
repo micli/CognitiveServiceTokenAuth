@@ -52,7 +52,7 @@ retrieve_token(app, endpoint, key)
 
 @app.route('/')
 def home():
-    return "Hello, Flask!"
+    return "Get cognitive service authentication token."
 
 
 @app.route('/token/', methods=["GET"])
