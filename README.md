@@ -1,6 +1,6 @@
 # CognitiveServiceTokenAuth
 
-## Benifits
+## Benefits
 
 + Avoid exposing the access keys of Azure Cognitive Services to improve security
 + Support a large number of clients to connect to Azure Cognitive Services at high frequency
@@ -46,6 +46,8 @@ To obtain an access token, a Cognitive Services key is required. In order to ens
 In the src/python/app.py file, a simple REST API service is built using the flask framework. Access the /token/ path of the service to obtain the access token directly. In a production environment, this REST API needs to be protected by the system's authentication to prevent unauthorized clients from obtaining access tokens.
 
 This REST API service starts a background thread that periodically accesses Azure Cognitive Services to refresh the access token data.
+
+To start this REST API service, please set COGNITIVE_SERVICE_ENDPOINT and COGNITIVE_SERVICE_KEY environment variables. The value you could find from Azure portal of Cognitive Service resource.
 
 ## Connect to Azure Cognitive Services using an access token
 
@@ -105,6 +107,8 @@ def retrieve_token(app, endpoint, key):
 在src/python/app.py 文件中，利用flask 框架构建了一个简单的REST API 服务。访问该服务的/token/路径直接可以获得访问令牌。 在生产环境中，**这个REST API 需要被系统的身份验证保护**，避免未授权客户端也可以获取访问令牌。
 
 这个REST API 服务启动了一个后台线程，周期性地访问Azure 认知服务刷新访问令牌数据。
+
+要启动此 REST API 服务，请设置 COGNITIVE_SERVICE_ENDPOINT 和 COGNITIVE_SERVICE_KEY 环境变量。 您可以从认知服务资源的 Azure 门户中找到的值。
 
 ## 使用访问令牌连接Azure 认知服务
 使用访问令牌访问Azure 认知服务很简单。对于Azure Speech SDK Python 来说，需要在构建SpeechConfig对象的时候指定auth_token 参数：
